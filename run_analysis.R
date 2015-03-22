@@ -25,7 +25,7 @@ test <- dataset(subject = subj_test, x=X_test, y = y_test, activity_lbl)
 train <- dataset(subject = subj_tr, x=X_tr, y = y_tr, activity_lbl)
 combined <- rbind(test, train)
 
-##combined %>% group_by("activity", "subject") %>% summarise_each(funs(mean))
+combined %>% group_by(activity, subject) %>% summarise_each(funs(mean)) %>% write.table( file = "result.txt", row.name=FALSE)
 
 
 
