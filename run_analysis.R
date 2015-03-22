@@ -27,15 +27,6 @@ combined <- rbind(test, train)
 
 ##combined %>% group_by("activity", "subject") %>% summarise_each(funs(mean))
 
-training <- function(){
-  n<- cbind(subj_tr, y_tr)
-  colnames(n)<- c("subject", "labels")
-  colnames(X_tr) <- features[["V2"]]
-  n1<-cbind(n, X_tr)
-  n2 <- merge(n1, activity_lbl, by.x = "labels", by.y = "V1", all = TRUE)
-  columns <- grepl( "V2" , names( n2 ) ) | grepl( "labels" , names( n2 ) ) | grepl( "subject" , names( n2 ) ) | grepl( "mean()" , names( n2 ) ) | grepl( "std()" , names( n2 ) )
-  n3 <- n2[, columns]
-}
 
 
 
