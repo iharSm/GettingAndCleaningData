@@ -38,6 +38,6 @@ And could be one of the following:
 	STANDING
 	LAYING
 
-"subject" - identifies the subject who performed the activity. Numeric variable, rangin from 1 to 30.
+"subject" - identifies the subject who performed the activity. Numeric variable, ranging from 1 to 30.
 
-the rest of the columns contain mean of the values for the variable (column name) for each activity and subject.
+The rest of the columns contain mean of the values for the variable (column name) for each activity and subject.
